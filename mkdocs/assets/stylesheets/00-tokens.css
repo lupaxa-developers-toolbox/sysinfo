@@ -55,6 +55,7 @@
  * MkDocs Material defines palette variables on the active colour scheme.
  * Site is locked to slate; override at the same level so branding wins.
  */
+
 [data-md-color-scheme="slate"] {
   --md-primary-bg-color: var(--lupaxa-white);
   --md-primary-bg-color--light: rgb(255 255 255 / 70%);
