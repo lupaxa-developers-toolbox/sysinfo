@@ -4,15 +4,9 @@
   </a>
 </p>
 
-<h1 align="center">sysinfo</h1>
+<h1 align="center">Sysinfo</h1>
 
 Cross-platform system inventory with modular collectors, redaction, and JSON/YAML/XML/HTML reports.
-
-<p align="center">
-  <a href="https://sysinfo.thelupaxaproject.org/">Documentation</a>
-  ·
-  <a href="https://github.com/lupaxa-developers-toolbox/sysinfo">GitHub</a>
-</p>
 
 ## Install
 
@@ -34,7 +28,7 @@ sysinfo --help
 - Python 3.10+
 - Runtime: `psutil` (plus `distro` on Linux; `tldextract` for PSL-aware redaction)
 
-## Library quick start
+## Library Quick Start
 
 ```python
 from lupaxa.sysinfo import collect_report
@@ -47,7 +41,7 @@ ready for JSON serialisation. See the
 [documentation](https://sysinfo.thelupaxaproject.org/) for `CollectOptions`,
 `RedactOptions`, and profiles.
 
-## CLI quick start
+## CLI Quick Start
 
 ```bash
 sysinfo --version
@@ -72,10 +66,18 @@ From a clone of this repository:
 make init                # first-time makefile-skills checkout
 make python-install-dev  # editable install with [dev]
 make python-check        # lint, type-check, and test
-make mkdocs-serve        # after skills are installed
 ```
 
-Community standards (code of conduct, contributing, security) are in [`docs/`](docs/).
+## Documentation
+
+Site pages live in `mkdocs/` and publish to
+<https://sysinfo.thelupaxaproject.org/>.
+
+```bash
+make init
+make python-install-dev
+make mkdocs-serve
+```
 
 <a href="https://github.com/the-lupaxa-project">
     <img src="https://raw.githubusercontent.com/the-lupaxa-project/brand-assets/master/logos/components/footer-for-child-orgs.svg" alt="The Lupaxa Project Footer" width="100%" />

@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import re
-import shutil
 import subprocess
 from pathlib import Path
 from typing import Any
@@ -13,12 +12,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 def asset_version(*, cwd: Path | None = None) -> str:
     """Return a short git SHA, or ``dev`` when git is unavailable."""
-    git = shutil.which("git")
-    if git is None:
-        return "dev"
     try:
-        return subprocess.check_output(  # noqa: S603
-            [git, "rev-parse", "--short", "HEAD"],
+        return subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"],
             cwd=cwd or REPO_ROOT,
             text=True,
             stderr=subprocess.DEVNULL,
@@ -54,7 +50,6 @@ def apply_asset_version(html: str, paths: list[str], version: str) -> str:
 
 
 def on_post_page(output: str, page: object, config: dict[str, Any]) -> str:
-    """MkDocs hook: append cache-bust query params to extra assets."""
     del page
     version = asset_version()
     return apply_asset_version(output, extra_asset_paths(config), version)

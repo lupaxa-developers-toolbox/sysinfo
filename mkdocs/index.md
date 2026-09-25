@@ -1,4 +1,4 @@
-# sysinfo
+# Sysinfo
 
 Cross-platform Python system inventory for Linux, macOS, and Windows — modular
 collectors, powerful redaction, and JSON/YAML/XML/HTML output.
@@ -13,7 +13,7 @@ sysinfo --help
 
 You can also run `python -m lupaxa.sysinfo`.
 
-## What it does
+## What it Does
 
 -   Collects basic host metadata by default (pretty-printed JSON)
 -   Opt-in collectors for CPU, memory, disks, network, ports, processes,
@@ -24,7 +24,7 @@ You can also run `python -m lupaxa.sysinfo`.
 -   Profiles for common workflows: `minimal`, `ci`, `support`
 -   Exports JSON, YAML, XML, compact HTML, or a human-readable summary (CLI)
 
-## Safe defaults
+## Safe Defaults
 
 -   Only basic info is collected unless you enable sections or a profile
 -   Environment variables require explicit `--env`; `--all` and profiles do
@@ -34,10 +34,3 @@ You can also run `python -m lupaxa.sysinfo`.
 -   In the library, `collect_report()` redacts by default; pass
     `redact=False` or a custom `RedactOptions` to change that
 -   Missing OS tools are skipped or normalized with `--strict-missing`
-
-## Next steps
-
-- [Getting started](getting-started.md) — install and first run
-- [Usage](usage.md) — profiles, sections, and redaction
-- [Reference](reference.md) — command-line options
-- [Examples](examples.md) — copy-paste recipes

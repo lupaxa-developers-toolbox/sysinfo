@@ -7,7 +7,7 @@ sysinfo
 sysinfo --output both
 ```
 
-## Selective collection
+## Selective Collection
 
 ```bash
 sysinfo --cpu --memory
@@ -17,34 +17,34 @@ sysinfo --services --hosts-dns --logs --storage
 sysinfo --hardware-extra --pkg-layout
 ```
 
-## Support dump (shareable)
+## Support Dump (Shareable)
 
 ```bash
 sysinfo --profile support --redact-all \
   --json sysreport.json --html sysreport.html
 ```
 
-## CI artifact
+## CI Artifact
 
 ```bash
 sysinfo --profile ci --output json --json ci-sysinfo.json
 ```
 
-## YAML report
+## YAML Report
 
 ```bash
 sysinfo --all --output yaml
 sysinfo --profile ci --yaml ci-sysinfo.yaml
 ```
 
-## XML report
+## XML Report
 
 ```bash
 sysinfo --all --output xml
 sysinfo --profile support --xml sysreport.xml
 ```
 
-## Environment variables
+## Environment Variables
 
 Environment variables are excluded from `--all` and every profile. Include
 them explicitly and consider redaction before sharing the report:

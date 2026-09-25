@@ -1,4 +1,4 @@
-# Getting started
+# Getting Started
 
 ## Requirements
 
@@ -30,7 +30,7 @@ Module entry point:
 python -m lupaxa.sysinfo --profile ci --json out.json
 ```
 
-### From source (development)
+### From Source (Development)
 
 Editable install with dev extras:
 
@@ -42,7 +42,7 @@ sysinfo --version
 
 The import path is `lupaxa.sysinfo` (`python -m lupaxa.sysinfo` for the CLI).
 
-## First run
+## First Run
 
 Default: basic info to stdout as pretty JSON:
 
@@ -68,7 +68,7 @@ sysinfo --profile support --xml sysinfo.xml
 Environment variables are excluded from `--all` and every profile. Enable
 them explicitly with `--env` only when they are needed.
 
-## Makefile helpers
+## Makefile Helpers
 
 ```bash
 make init                 # clone makefile-skills into .makefiles/
