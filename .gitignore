@@ -9,7 +9,7 @@ cursor-docs
 # Make
 .makefiles/
 
-# MkDocs
+# Local MkDocs leftovers (if any)
 site/
 
 # Python
